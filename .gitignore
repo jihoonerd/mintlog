@@ -1,6 +1,7 @@
 # Custom
 staticfiles/
 uploads/
+*.lock
 
 # IDE
 .idea/
