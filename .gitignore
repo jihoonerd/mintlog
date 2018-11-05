@@ -2,6 +2,7 @@
 staticfiles/
 uploads/
 *.lock
+secret_key.py
 
 # IDE
 .idea/
