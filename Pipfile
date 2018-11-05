@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==2.0.*"
+django-markdownx = "*"
+pygments = "*"
+django-tagulous = "*"
+django-disqus = "*"
+django-filter = "*"
+django-crispy-forms = "*"
+psycopg2-binary = "*"
+uwsgi = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
