@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-from .secret_key import SECRET_KEY
 import os
+import datetime
+from .secret_key import SECRET_KEY
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -117,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -128,5 +129,40 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
+# MEDIA
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/media/'
+
+# CRISPY_TEMPLATE_PACK
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# MARKDOWN_EXTENSIONS
+# https://python-markdown.github.io/
+# Recommended: Storing all uploaded images in a single directory would over time results in a lot files being stored
+# in one location. This would slow down the process of saving and loading files substantially, and can in turn lead
+# to your website becoming very slow when it comes to loading images.
+MARKDOWNX_MEDIA_PATH = datetime.now().strftime('images/%Y/%m/%d')
+MARKDOWNX_MARKDOWN_EXTENSIONS = [
+    'markdown.extensions.extra',
+    'markdown.extensions.codehilite',
+]
+
+# SERIALIZATION MODULES FOR DJANGO-TAGULOUS
+SERIALIZATION_MODULES = {
+    'xml':    'tagulous.serializers.xml_serializer',
+    'json':   'tagulous.serializers.json',
+    'python': 'tagulous.serializers.python',
+    'yaml':   'tagulous.serializers.pyyaml',
+}
+
+# DISQUS
+# DISQUS_API_KEY = ''
+# DISQUS_WEBSITE_SHORTNAME = ''
+
+# SITE ID
+SITE_ID = 1
