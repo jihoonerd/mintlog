@@ -1,0 +1,42 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+* { font-family: 'Spoqa Han Sans', 'Sans-serif'; }
+
+body {
+    padding-top: 80px;
+}
+
+.navbar {
+    min-height: 60px;
+}
+
+.navbar-brand {
+    padding: 0;
+    height: 60px;
+    line-height: 60px;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav > li > a {
+        /* (60px - line-height of 27px) / 2 = 16.5px */
+        padding-top: 16.5px;
+        padding-bottom: 16.5px;
+        line-height: 27px;
+    }
+}
+
+/*PAGE STATUS*/
+.navbar .navbar-nav .nav-item .active {
+    color: #1abc9c;
+}
+
+/*HIGHLIGHTING*/
+.navbar .navbar-nav .nav-item a:hover,
+.navbar .navbar-nav .nav-item a:focus {
+    background-color: #e7e7e7;
+    color: #1abc9c;
+}
+
+/*Remove Hyperlink Unerline*/
+.container a {
+    text-decoration: none;
+}
