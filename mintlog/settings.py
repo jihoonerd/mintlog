@@ -45,11 +45,12 @@ INSTALLED_APPS = [
     'crispy_forms',
     'markdownx',
     'tagulous',
-    'disqus',
     'django_filters',
+    'disqus',
 
     # Local
     'home.apps.HomeConfig',
+    'about.apps.AboutConfig',
     'portfolio.apps.PortfolioConfig',
     'blog.apps.BlogConfig',
 ]

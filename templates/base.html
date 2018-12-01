@@ -26,7 +26,7 @@
                     <ul class="navbar-nav text-center">
                         {% with url_name=request.resolver_match.url_name %}
                         <li class="nav-item">
-                            <a class="nav-link {% if url_name == 'about' %}active{% endif %}" href="">About</a>
+                            <a class="nav-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if url_name == 'portfolio_list' or url_name == 'portfolio_detail' %}active{% endif %}" href="{% url 'portfolio_list' %}">Portfolio</a>
