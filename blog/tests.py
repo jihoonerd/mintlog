@@ -41,6 +41,8 @@ class BlogTests(TestCase):
     def test_post_list_view(self):
         response = self.client.get(reverse('post_list'))
         self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Description')
+        self.assertContains(response, 'Contents')
         self.assertTemplateUsed(response, 'post_list.html')
 
     def test_post_detail_view(self):
@@ -48,4 +50,5 @@ class BlogTests(TestCase):
         no_response = self.client.get('/blog/no-exist/')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(no_response.status_code, 404)
+        self.assertContains(response, 'Test Posting')
         self.assertTemplateUsed(response, 'post_detail.html')

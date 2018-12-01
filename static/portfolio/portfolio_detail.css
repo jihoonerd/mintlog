@@ -1,0 +1,97 @@
+body {
+    background-color: white;
+}
+
+code {
+    background: #f8f8f8;
+    border: 1px solid darkgrey;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 3px;
+}
+
+/* Post Detail CSS */
+.badge {
+    font-size: 90%;
+}
+
+.badge-mint {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.portfolio_title {
+    font-size: 400%;
+    padding: 3% 0%;
+    border-bottom: 1px solid darkgray;
+}
+
+.portfolio_contents {
+    padding: 3% 0%;
+}
+
+/* Table */
+.portfolio_contents table {
+    margin: 3%;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio_contents th, td {
+    padding: 3% 1%;
+    border-bottom: 1px solid darkgray;
+    text-align: left;
+}
+
+.portfolio_contents th {
+    background-color: royalblue;
+    color: white;
+}
+.portfolio_contents tr:nth-child(even) {background-color: whitesmoke;}
+.portfolio_contents tr:hover {background-color: lightgray;}
+
+/* Image inside the contents */
+.portfolio_contents img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Blockquotes */
+blockquote{
+    font-size: 120%;
+    width: 65%;
+    margin: 50px auto;
+    font-style: italic;
+    color: #555555;
+    padding: 1.2em 75px;
+    border-left:8px solid #36454F;
+    line-height: 1.6;
+    position: relative;
+    background:#EDEDED;
+}
+
+blockquote::before{
+    content: "\201C";
+    color: #36454F;
+    font-size: 400%;
+    position: absolute;
+    left: 10px;
+    top:-10px;
+}
+
+blockquote::after{
+    content: '';
+}
+
+blockquote footer{
+    display:block;
+    color: dimgray;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 3%;
+}

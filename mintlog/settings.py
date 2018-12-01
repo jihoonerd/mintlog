@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     # Local
     'home.apps.HomeConfig',
+    'portfolio.apps.PortfolioConfig',
     'blog.apps.BlogConfig',
 ]
 
