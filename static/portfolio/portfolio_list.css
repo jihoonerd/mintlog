@@ -1,0 +1,56 @@
+body {
+    background-color: white;
+}
+
+.tag_list {
+    text-align: center;
+    padding: 1%;
+    margin: 1%;
+}
+
+.tag_list .btn {
+    background-color: transparent;
+    text-transform: uppercase;
+    color: darkgrey;
+}
+
+.tag_list .btn.active,
+.tag_list .btn:hover,
+.tag_list .btn:focus {
+    color: black;
+    box-shadow: none !important;
+}
+
+/*For Card Styling*/
+.card {
+    margin: 3% 0%;
+}
+
+.card > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    padding: 0;
+}
+
+.card-text-box {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 0%;
+}
+
+/*For Pagination*/
+.page-link,
+.page-link:focus, .page-link:hover {
+    color: #36454F;
+}
+
+.page-item.active .page-link:hover,
+.page-item.active .page-link:focus,
+.page-item.active .page-link {
+    background-color: #36454F;
+    border-color: #36454F;
+    outline: none;
+    color: white;
+}

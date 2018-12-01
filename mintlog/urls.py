@@ -20,6 +20,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', include('home.urls')),
+    path('portfolio/', include('portfolio.urls')),
     path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
     path('markdownx/', include('markdownx.urls')),

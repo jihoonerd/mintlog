@@ -1,0 +1,63 @@
+<!-- templates/post_list.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'portfolio/portfolio_list.css'%}">
+{% endblock %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
+
+    <div class="tag_container">
+        <div class="tag_list">
+            <form method="get">
+                <button type="submit" class="btn {% if filter_tag == 'ALL' %}active{% endif %}" name="portfolio_tag" value="ALL">ALL</button>
+                {% for tag in tags %}
+                    <button type="submit" class="btn {% if filter_tag == tag.id|stringformat:"s" %}active{% endif %}" name="portfolio_tag" value="{{ tag.id }}">{{ tag }}</button>
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+
+    <div class="portfolios">
+        {% for object in object_list %}
+            <div class="card text-white text-center">
+                <a href="{% url 'portfolio_detail' object.slug %}">
+                    <img class="card-img" src="{{ object.thumbnail_image.url }}" alt="{{ object.title }}">
+                    <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+                        <div class="card-text-box">
+                            <h5 class="card-title">{{ object.title }}</h5>
+                            <p class="card-text">{{ object.description }}</p>
+                            <small class="card-text">{{ object.published_at }}</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+
+        <div class="position-static">
+            {% if is_paginated %}
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item"><a class="page-link" href="/portfolio/?portfolio_tag={{ filter_tag }}&page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                        <li class="page-item disabled"><a class="page-link">&laquo;</a></li>
+                    {% endif %}
+                    {% for i in paginator.page_range %}
+                        {% if page_obj.number == i %}
+                            <li class="page-item active"><a class="page-link">{{ i }}<span class="sr-only">(current)</span></a></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link" href="/portfolio/?portfolio_tag={{ filter_tag }}&page={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <li class="page-item"><a class="page-link" href="/portfolio/?portfolio_tag={{ filter_tag }}&page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                        <li class="page-item  disabled"><a class="page-link">&raquo;</a></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}
