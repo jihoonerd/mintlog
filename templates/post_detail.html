@@ -1,0 +1,34 @@
+<!-- templates/post_detail.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <!-- Load CSS for Syntax Highlighting -->
+    <link rel="stylesheet" href="{% static 'pygments_css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/post_detail.css' %}">
+{% endblock %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+    <div class="post_detail">
+        <span class="post_published_at badge badge-mint">{{ object.published_at }}</span>
+        <span class="tag">
+            {% for tag in object.post_tag.all %}
+                <span class="badge badge-dark">{{ tag }}</span>
+            {% endfor %}
+        </span>
+        <div class="post_title">{{ object.title }}</div>
+        <div class="post_contents">{{ object.formatted_markdown|safe }}</div>
+    </div>
+
+    <div class="comments">
+    {% load disqus_tags %}
+    {% disqus_show_comments %}
+    </div>
+
+{% block script %}
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+{% endblock %}
+
+{% endblock content %}

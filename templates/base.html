@@ -32,7 +32,7 @@
                             <a class="nav-link {% if url_name == 'portfolio_list' or url_name == 'portfolio_detail' %}active{% endif %}" href="">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if url_name == 'post_list' or url_name == 'post_detail' %}active{% endif %}" href="">Blog</a>
+                            <a class="nav-link {% if url_name == 'post_list' or url_name == 'post_detail' %}active{% endif %}" href="{% url 'post_list' %}">Blog</a>
                         </li>
                         {% endwith %}
                     </ul>
