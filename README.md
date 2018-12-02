@@ -4,3 +4,19 @@
 
 ## Description
 Django based personal blog template
+
+
+## Installation
+This project manages environment with [`pipenv`](https://pipenv.readthedocs.io/en/latest/).
+```bash
+$ pip install pipenv --user
+```
+Now, you can prepare your environment and install packages simply by:
+```bash
+pipenv install
+```
+
+## Running Local Server
+```bash
+pipenv run "python manage.py runserver"
+```
