@@ -13,10 +13,10 @@ $ pip install pipenv --user
 ```
 Now, you can prepare your environment and install packages simply by:
 ```bash
-pipenv install
+$ pipenv install
 ```
 
 ## Running Local Server
 ```bash
-pipenv run "python manage.py runserver"
+$ pipenv run "python manage.py runserver"
 ```
