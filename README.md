@@ -4,7 +4,16 @@
 
 ## Description
 Django based personal blog template
+
+Mintlog is for people who want to operate django-based blog without knowing django. Mintlog is primarily specialized for managing blog postings especially written in Markdown with scientific & engineering contents.
+
 ![Home Screen](./images/home.jpg)
+
+### Features
+* Markdown Posting
+* Inline Image Uploading
+* Tagging
+* Mathjax
 
 ## Installation
 This project manages environment with [`pipenv`](https://pipenv.readthedocs.io/en/latest/).
