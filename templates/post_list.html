@@ -7,8 +7,12 @@
 
 {% block title %}Blog{% endblock %}
 
+{% block content-image %}
+    <img class="content-image" src="{% static "blog/blog.jpg" %}">
+{% endblock %}
 {% block content %}
 
+    <h1 align="center">BLOG</h1>
     <div class="tag_container">
         <div class="tag_list">
             <form method="get">
