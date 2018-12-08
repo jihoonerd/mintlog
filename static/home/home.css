@@ -5,9 +5,12 @@ body {
 }
 
 h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30pt;
     text-align: center;
     position: absolute;
     left: 0vw;
     top: 75vh;
     width: 100%;
+    text-decoration-line: underline;
 }
