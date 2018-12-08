@@ -20,7 +20,7 @@ $ pipenv install
 For the first launching, DB migration is required:
 ```bash
 $ pipenv run "python manage.py migrate"
-$ pipenv run "python manage.py migrate --run--syncdb
+$ pipenv run "python manage.py migrate --run--syncdb"
 ```
 
 Running local server:
