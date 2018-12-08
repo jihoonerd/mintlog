@@ -4,7 +4,7 @@
 
 ## Description
 Django based personal blog template
-
+![Home Screen](./images/home.jpg)
 
 ## Installation
 This project manages environment with [`pipenv`](https://pipenv.readthedocs.io/en/latest/).
@@ -17,6 +17,13 @@ $ pipenv install
 ```
 
 ## Running Local Server
+For the first launching, DB migration is required:
+```bash
+$ pipenv run "python manage.py migrate"
+$ pipenv run "python manage.py migrate --run--syncdb
+```
+
+Running local server:
 ```bash
 $ pipenv run "python manage.py runserver"
 ```
