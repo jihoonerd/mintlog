@@ -9,10 +9,18 @@ body {
     min-height: 60px;
 }
 
+.navbar li a {
+    color: black;
+}
+
 .navbar-brand {
     padding: 0;
     height: 60px;
     line-height: 60px;
+}
+
+.navbar-brand .brand-text {
+    color: black;
 }
 
 @media (min-width: 992px) {
@@ -26,14 +34,18 @@ body {
 
 /*PAGE STATUS*/
 .navbar .navbar-nav .nav-item .active {
-    color: #1abc9c;
+    color: white;
 }
 
 /*HIGHLIGHTING*/
 .navbar .navbar-nav .nav-item a:hover,
 .navbar .navbar-nav .nav-item a:focus {
-    background-color: #e7e7e7;
-    color: #1abc9c;
+    color: white;
+}
+
+.navbar-brand .brand-text:hover,
+.navbar-brand .brand-text:focus {
+    color: white;
 }
 
 /*Remove Hyperlink Unerline*/
