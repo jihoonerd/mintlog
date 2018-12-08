@@ -1,12 +1,15 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-* { font-family: 'Spoqa Han Sans', 'Sans-serif'; }
 
-body {
-    padding-top: 80px;
+* {
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
 }
 
 .navbar {
-    min-height: 60px;
+    min-height: 45px;
+}
+
+.navbar-light {
+    background: rgba(0,0,0,0.1)
 }
 
 .navbar li a {
@@ -15,8 +18,8 @@ body {
 
 .navbar-brand {
     padding: 0;
-    height: 60px;
-    line-height: 60px;
+    height: 45px;
+    line-height: 45px;
 }
 
 .navbar-brand .brand-text {
@@ -25,30 +28,60 @@ body {
 
 @media (min-width: 992px) {
     .navbar-nav > li > a {
-        /* (60px - line-height of 27px) / 2 = 16.5px */
-        padding-top: 16.5px;
-        padding-bottom: 16.5px;
-        line-height: 27px;
+        /* (45px - line-height of 18px) / 2 = 13.5px */
+        padding-top: 13.5px;
+        padding-bottom: 13.5px;
+        line-height: 18px;
     }
-}
-
-/*PAGE STATUS*/
-.navbar .navbar-nav .nav-item .active {
-    color: white;
-}
-
-/*HIGHLIGHTING*/
-.navbar .navbar-nav .nav-item a:hover,
-.navbar .navbar-nav .nav-item a:focus {
-    color: white;
 }
 
 .navbar-brand .brand-text:hover,
 .navbar-brand .brand-text:focus {
-    color: white;
+    color: black;
 }
 
-/*Remove Hyperlink Unerline*/
-.container a {
+.navbar .navbar-nav .nav-item > a {
+    position: relative;
+    color: black;
     text-decoration: none;
+}
+
+.navbar .navbar-nav .nav-item > a:hover,
+.navbar .navbar-nav .nav-item > a:focus {
+    color: black;
+}
+
+.navbar .navbar-nav .nav-item > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.navbar .navbar-nav .nav-item > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/*PAGE STATUS*/
+.navbar .navbar-nav .nav-item > .active {
+
+}
+
+/*Content Image*/
+.content-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px   ;
+    width: 100vw;
 }

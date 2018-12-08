@@ -15,7 +15,7 @@
     </head>
     <body>
         <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg py-0 fixed-top">
+        <nav class="navbar navbar-light navbar-expand-lg py-0 fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home'%}">
                     <div class="brand-text">Mintlog</div>
@@ -28,20 +28,20 @@
                     <ul class="navbar-nav text-center">
                         {% with url_name=request.resolver_match.url_name %}
                         <li class="nav-item">
-                            <a class="nav-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About</a>
+                            <a class="nav-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'about' %}"><span class="nav-text">About</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if url_name == 'portfolio_list' or url_name == 'portfolio_detail' %}active{% endif %}" href="{% url 'portfolio_list' %}">Portfolio</a>
+                            <a class="nav-link {% if url_name == 'portfolio_list' or url_name == 'portfolio_detail' %}active{% endif %}" href="{% url 'portfolio_list' %}"><span class="nav-text">Portfolio</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if url_name == 'post_list' or url_name == 'post_detail' %}active{% endif %}" href="{% url 'post_list' %}">Blog</a>
+                            <a class="nav-link {% if url_name == 'post_list' or url_name == 'post_detail' %}active{% endif %}" href="{% url 'post_list' %}"><span class="nav-text">Blog</span></a>
                         </li>
                         {% endwith %}
                     </ul>
                 </div>
             </div>
         </nav>
-
+        {% block content-image %}{% endblock content-image %}
         <!-- Contents -->
         <div class="container">
             {% block content %}{% endblock content %}
