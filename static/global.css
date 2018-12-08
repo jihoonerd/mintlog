@@ -9,7 +9,7 @@
 }
 
 .navbar-light {
-    background: rgba(0,0,0,0.1)
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .navbar li a {
@@ -82,6 +82,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 200px   ;
+    height: 165px;
     width: 100vw;
 }
