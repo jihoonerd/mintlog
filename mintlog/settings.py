@@ -138,7 +138,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 # MEDIA
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # CRISPY_TEMPLATE_PACK
@@ -149,7 +149,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Recommended: Storing all uploaded images in a single directory would over time results in a lot files being stored
 # in one location. This would slow down the process of saving and loading files substantially, and can in turn lead
 # to your website becoming very slow when it comes to loading images.
-MARKDOWNX_MEDIA_PATH = datetime.now().strftime('images/%Y/%m/%d')
+MARKDOWNX_MEDIA_PATH = datetime.now().strftime('media/%Y/%m/%d')
 MARKDOWNX_MARKDOWN_EXTENSIONS = [
     'markdown.extensions.extra',
     'markdown.extensions.codehilite',

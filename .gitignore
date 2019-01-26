@@ -1,6 +1,6 @@
 # Custom
 staticfiles/
-uploads/
+media/
 
 # IDE
 .idea/
