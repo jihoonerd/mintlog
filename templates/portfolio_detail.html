@@ -11,13 +11,13 @@
 
 {% block content %}
     <div class="portfolio_detail">
+        <div class="portfolio_title">{{ object.title }}</div>
         <span class="portfolio_published_at badge badge-mint">{{ object.published_at }}</span>
         <span class="tag">
             {% for tag in object.portfolio_tag.all %}
                 <span class="badge badge-dark">{{ tag }}</span>
             {% endfor %}
         </span>
-        <div class="portfolio_title">{{ object.title }}</div>
         <div class="portfolio_contents">{{ object.formatted_markdown|safe }}</div>
     </div>
 
