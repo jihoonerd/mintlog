@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/jihoonerd/mintlog.svg?style=svg)](https://circleci.com/gh/jihoonerd/mintlog)
 
 ## Demo Site
-You can see working demo site at [here](https://jihoonerd.com/portfolio/mintlog/).
+You can see working demo site at [here](https://jihoon.me).
 
 ## Description
 Django based personal blog template
@@ -31,8 +31,8 @@ $ pipenv install
 ## Running Local Server
 For the first launching, DB migration is required:
 ```bash
+$ pipenv run "python manage.py makemigrations blog portfolio"
 $ pipenv run "python manage.py migrate"
-$ pipenv run "python manage.py migrate --run--syncdb"
 ```
 
 Running local server:
