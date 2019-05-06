@@ -4,14 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = ">=2.0.11"
+django = "*"
 django-markdownx = "*"
 pygments = "*"
 django-tagulous = "*"
 django-disqus = "*"
 django-filter = "*"
 django-crispy-forms = "*"
-psycopg2-binary = "*"
-uwsgi = "*"
 
 [dev-packages]
