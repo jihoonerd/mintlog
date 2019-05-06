@@ -15,6 +15,3 @@ psycopg2-binary = "*"
 uwsgi = "*"
 
 [dev-packages]
-
-[requires]
-python_version = "3.6"
